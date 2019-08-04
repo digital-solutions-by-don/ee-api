@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf16717c-1a7a-4938-9c18-599e65b45d82" name="Default Changelist" comment="" />
+    <list default="true" id="cf16717c-1a7a-4938-9c18-599e65b45d82" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/emergency_electric.db3" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +76,7 @@
       <workItem from="1564836692616" duration="5613000" />
       <workItem from="1564873085355" duration="13282000" />
       <workItem from="1564886389093" duration="6586000" />
+      <workItem from="1564937953213" duration="109000" />
     </task>
     <servers />
   </component>
@@ -84,7 +88,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
