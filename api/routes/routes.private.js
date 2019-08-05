@@ -1,10 +1,13 @@
 const express = require('express');
-const MsgController = require('../controllers/messages.controller');
+const MsgCtrl = require('../controllers/messages.controller');
+const AppCtrl = require('../controllers/application.controller');
 const privateRoutes = express.Router();
 
 privateRoutes
-    .get('/messages/:id', MsgController.fetchById)
-    .post('/messages', MsgController.add)
-    .delete('/messages/:id', MsgController.delete);
+    .get('/messages/:id', MsgCtrl.fetchById)
+    .post('/messages', MsgCtrl.add)
+    .delete('/messages/:id', MsgCtrl.delete)
+    .post('/application/personal-data', AppCtrl.addPersonalData)
+    .get('/application/:id', AppCtrl.fetchUserApplication);
 
 module.exports = privateRoutes;
