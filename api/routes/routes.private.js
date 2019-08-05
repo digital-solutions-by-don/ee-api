@@ -8,6 +8,7 @@ privateRoutes
     .post('/messages', MsgCtrl.add)
     .delete('/messages/:id', MsgCtrl.delete)
     .post('/application/personal-data', AppCtrl.addPersonalData)
-    .get('/application/:id', AppCtrl.fetchUserApplication);
+    .get('/application/:id', AppCtrl.fetchUserApplication)
+    .post('/application/employment-data', AppCtrl.addEmploymentData);
 
 module.exports = privateRoutes;

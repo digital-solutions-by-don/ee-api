@@ -35,6 +35,7 @@ exports.up = knex => {
     table.boolean('under_18').defaultTo(false);
     table.boolean('permit_yes').defaultTo(false);
     table.boolean('permit_no').defaultTo(false);
+    table.timestamps(true, true);
   });
 };
 

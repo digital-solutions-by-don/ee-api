@@ -45,6 +45,20 @@ class ApplicationController {
     }
   }
 
+  static async addEmploymentData(req, res) {
+    try {
+      const payload = await ApplicationStore.addEmploymentData(req);
+      if (payload && payload.status && payload.status !== 200) {
+        return res.status(payload.status)
+                  .json(payload.message);
+      }
+      res.json(payload);
+    } catch (exception) {
+      res.status(500)
+         .send(exception);
+    }
+  }
+
 }
 
 module.exports = ApplicationController;
