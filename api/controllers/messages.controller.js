@@ -3,7 +3,8 @@ const MessageStore = require('../stores/messages.store');
 class MessageController {
   static async fetch(req, res) {
     try {
-      const payload = await MessageStore.fetch(req);
+      const payload = await MessageStore.fetch();
+      res.json(payload);
     } catch (exception) {
       res.status(500)
          .send(exception);
@@ -13,6 +14,7 @@ class MessageController {
   static async fetchById(req, res) {
     try {
       const payload = await MessageStore.fetchById(req);
+      res.json(payload);
     } catch (exception) {
       res.status(500)
          .send(exception);

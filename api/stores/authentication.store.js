@@ -4,11 +4,21 @@ const secret = process.env.SECRET || 'testing';
 
 class AuthenticationStore {
   static async authenticate(req, res, next) {
-    const payload = await this.consumeToken(req);
-    if (payload && payload.status !== 200) {
-      return res.status(payload.status).json({ message: payload.message });
+    const payload = await AuthenticationStore.consumeToken(req);
+    console.log(payload);
+    if (payload && payload.status && payload.status !== 200) {
+      return res.status(payload.status)
+                .json({ message: payload.message });
     }
     req.user = payload.id;
+    next();
+  }
+
+  static async isAdmin(req, res, next) {
+    if (!req.user || req.role !== 'ADMIN') {
+      return res.status(401)
+                .json({ message: 'Unauthorized' });
+    }
     next();
   }
 
@@ -19,8 +29,12 @@ class AuthenticationStore {
   static signJwt(user) {
     let payload = {
       id: user.id,
-      iat: moment().unix(),
-      exp: moment().add(1, 'hour').unix(),
+      role: user.role,
+      iat: moment()
+          .unix(),
+      exp: moment()
+          .add(1, 'hour')
+          .unix(),
     };
     return jwt.sign(payload, secret);
   }
@@ -42,7 +56,7 @@ class AuthenticationStore {
 
   static async consumeToken(req) {
     let result = {};
-    if (!req.headers.authorization) {
+    if (req.headers && !req.headers.authorization) {
       result.status = 401;
       result.message = 'Please make sure your request has an authorization header.';
       return result;
@@ -59,10 +73,11 @@ class AuthenticationStore {
     }
     if (!payload || !payload.id) {
       result.status = 401;
-      result.message = "Authorization Denied.";
+      result.message = 'Authorization Denied.';
       return result;
     }
-    if (payload.exp <= moment().unix()) {
+    if (payload.exp <= moment()
+        .unix()) {
       result.status = 401;
       result.message = 'Token has expired';
       return result;
