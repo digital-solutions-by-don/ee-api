@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf16717c-1a7a-4938-9c18-599e65b45d82" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/models/employment.model.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/controllers/application.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/controllers/application.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/routes/routes.private.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/routes.private.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/stores/application.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/stores/application.store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/stores/validation.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/stores/validation.store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/migrations/20190805085516_application_table.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/migrations/20190805085516_application_table.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +40,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="12.4.0" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.3.1" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -89,6 +86,8 @@
       <workItem from="1564886389093" duration="6586000" />
       <workItem from="1564937953213" duration="109000" />
       <workItem from="1564938581255" duration="10928000" />
+      <workItem from="1565054898605" duration="13000" />
+      <workItem from="1565088494683" duration="3091000" />
     </task>
     <task id="LOCAL-00001" summary="Messages Done">
       <created>1565009460841</created>
@@ -111,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565015371307</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Adding Employment Data">
+      <created>1565016988658</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1565016988658</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +140,7 @@
     <MESSAGE value="Messages Done" />
     <MESSAGE value="Database Updates" />
     <MESSAGE value="Started Working on Application" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started Working on Application" />
+    <MESSAGE value="Adding Employment Data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding Employment Data" />
   </component>
 </project>

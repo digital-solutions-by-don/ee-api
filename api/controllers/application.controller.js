@@ -45,6 +45,26 @@ class ApplicationController {
     }
   }
 
+  static async updatePersonalData(req, res) {
+    try {
+      const payload = await ApplicationStore.updatePersonalData(req);
+      res.json(payload);
+    } catch (exception) {
+      res.status(500)
+         .send(exception);
+    }
+  }
+
+  static async deleteApplication(req, res) {
+    try {
+      const payload = await ApplicationStore.deleteApplication(req);
+      res.json(payload);
+    } catch (exception) {
+      res.status(500)
+         .send(exception);
+    }
+  }
+
   static async addEmploymentData(req, res) {
     try {
       const payload = await ApplicationStore.addEmploymentData(req);
@@ -59,6 +79,35 @@ class ApplicationController {
     }
   }
 
+  static async fetchEmploymentData(req, res) {
+    try {
+      const payload = await ApplicationStore.fetchEmploymentData(req);
+      res.json(payload);
+    } catch (exception) {
+      res.status(500)
+         .send(exception);
+    }
+  }
+
+  static async updateEmploymentData(req, res) {
+    try {
+      const payload = await ApplicationStore.updateEmploymentData(req);
+      res.json(payload);
+    } catch (exception) {
+      res.status(500)
+         .send(exception);
+    }
+  }
+
+  static async deleteEmploymentData(req, res) {
+    try {
+      const payload = await ApplicationStore.removeEmploymentData(req);
+      res.json(payload);
+    } catch (exception) {
+      res.status(500)
+         .send(exception);
+    }
+  }
 }
 
 module.exports = ApplicationController;

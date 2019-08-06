@@ -42,6 +42,22 @@ class ApplicationStore {
     }
   }
 
+  static async updatePersonalData(req) {
+    try {
+      return await Application.update(req.body);
+    } catch (exception) {
+      return exception;
+    }
+  }
+
+  static async deleteApplication(req) {
+    try {
+      return await Application.remove(req.params.id);
+    } catch (exception) {
+      return exception;
+    }
+  }
+
   static async addEmploymentData(req) {
     let result = {};
     try {
@@ -53,6 +69,30 @@ class ApplicationStore {
         return result;
       }
       return await Employment.add(req.body);
+    } catch (exception) {
+      return exception;
+    }
+  }
+
+  static async fetchEmploymentData(req) {
+    try {
+      return await Employment.findBy(req.params.appId);
+    } catch (exception) {
+      return exception;
+    }
+  }
+
+  static async updateEmploymentData(req) {
+    try {
+      return await Employment.update(req.body);
+    } catch (exception) {
+      return exception
+    }
+  }
+
+  static async removeEmploymentData(req) {
+    try {
+      return await Employment.remove(req.params.id)
     } catch (exception) {
       return exception;
     }
